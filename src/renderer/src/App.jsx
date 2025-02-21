@@ -1,10 +1,8 @@
-import Versions from './components/Versions'
 import TopBar from './components/TopBar'
-import electronLogo from './assets/electron.svg'
+import { useState } from 'react'
 
 function App() {
-  const ipcHandle = () => window.electron.ipcRenderer.send('ping')
-
+  const [isoverlay, setIsOverlay] = useState(false);
   return (
     <>
     <TopBar></TopBar>
